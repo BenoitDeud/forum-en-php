@@ -1,0 +1,764 @@
+body {
+    background-color: #252525;
+    font-family: 'Roboto', sans-serif;
+}
+
+a {
+    color: #aa8453;
+    text-decoration: none;
+    font-size: 60px;
+}
+
+/*header*/
+header {
+    color: #aa8453;
+    font-size: 60px;
+    display: flex;
+    background-color: black;
+    padding: 1%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    font-weight: bold;
+    border-bottom: solid 2px white;
+
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+}
+
+/*Main index*/
+.mainIndex {
+    background: linear-gradient(115deg, rgba(46, 72, 24, 0.8), rgba(71, 7, 5, 0.7)), url(../IMAGES/doner-viande-dans-pain-planche-bois.jpg);
+    padding: 2%;
+}
+
+/* Carroussel */
+.carouselExampleAutoplaying {
+    height: 750px;
+}
+
+.kebab {
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    border: ridge black 10px;
+}
+
+.kebabImage {
+    height: 750px;
+}
+
+/*boutons inscription login*/
+.boutons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-bottom: 2%;
+
+}
+
+.boutonsK {
+    padding-top: 1%;
+    padding-bottom: 1%;
+    background-color: rgb(255, 254, 254);
+    width: 120%;
+    text-align: center;
+    border: ridge black 10px;
+}
+
+
+/*formulaire*/
+.flexForum2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+}
+
+#jeVaisToutCasser {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background: linear-gradient(115deg, rgba(158, 123, 58, 0.8), rgba(215, 78, 73, 0.7)), url(../IMAGES/doner-viande-dans-pain-planche-bois.jpg);
+    padding: 2%;
+    color: #aa8453;
+    font-weight: bold;
+    padding-top: 10%;
+    padding-bottom: 10%;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin-bottom: 1%;
+    background-color: rgb(65, 56, 56);
+    padding: 1%;
+    font-size: 25px;
+    margin-bottom: 2%;
+    gap: 10px;
+
+}
+
+#submit {
+    width: 20%;
+    padding: 1%;
+    display: flex;
+    justify-content: center;
+    font-size: 25px;
+}
+
+#submit:hover {
+    background-color: rgb(255, 0, 0);
+}
+
+.yolo {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+
+/* LOGIN */
+#formulaireConnexion {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background: linear-gradient(115deg, rgba(158, 123, 58, 0.8), rgba(215, 78, 73, 0.7)), url(../IMAGES/doner-viande-dans-pain-planche-bois.jpg);
+    padding: 12%;
+    color: #aa8453;
+
+}
+
+#connexion {
+    width: 20%;
+    padding: 1%;
+    display: flex;
+    justify-content: center;
+    font-size: 25px;
+}
+
+#connexion:hover {
+    background-color: rgb(191, 22, 98);
+}
+
+/* FORUM */
+.mainForum {
+
+    padding: 2%;
+}
+
+.flexForum {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-bottom: 1%;
+}
+
+h2 {
+    text-align: center;
+    font-size: 35px;
+    width: 85%;
+    margin-left: 7.5%;
+}
+
+.gestionImage {
+    display: flex;
+    flex-direction: row;
+    background: linear-gradient(115deg, rgba(226, 221, 215, 0.8), rgba(226, 160, 157, 0.7)), url(../IMAGES/doner-viande-dans-pain-planche-bois.jpg);
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    border: solid white 2px;
+}
+
+.blablaKebab {
+    color: black;
+    font-size: 30px;
+    font-weight: bold;
+    margin: 2%;
+    line-height: 120%;
+}
+
+/* forum cards bootstrap */
+.card {
+    background: linear-gradient(115deg, rgba(134, 240, 144, 0.8), rgba(225, 93, 89, 0.7)), url(../IMAGES/doner-viande-dans-pain-planche-bois.jpg);
+    border: ridge 5px rgb(255, 255, 255);
+}
+
+.cartesFlex {
+    display: flex;
+    flex-direction: row;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 2%;
+    justify-content: space-around;
+    gap: 10px;
+}
+
+.card-title {
+    font-size: 30px;
+    color: #000000;
+    font-weight: bold;
+
+}
+
+.card-text {
+    font-weight: bold;
+}
+
+.boutonFlex {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.btn {
+    color: #aa8453;
+    background-color: #252525;
+    border: solid rgb(255, 255, 255) 2px;
+    font-weight: bold;
+}
+
+.card-img-top {
+    height: 350px;
+}
+
+/* Les sujets  La salade*/
+
+.presentationCrudite {
+    margin-top: 2%;
+    display: flex;
+    flex-direction: row;
+    margin-left: 10%;
+    margin-right: 10%;
+    border: ridge white 5px;
+    border-top-right-radius: 25px;
+    width: 80%;
+    background: linear-gradient(115deg, rgba(134, 240, 144, 0.8), rgba(23, 113, 40, 0.7)), url(../IMAGES/salade-fraiche-angle-eleve-plaque-noire.jpg);
+    margin-bottom: 2%;
+
+}
+
+.salade {
+    width: 40%;
+    height: 30rem;
+}
+
+.blablaCrudite {
+    width: 60%;
+
+}
+
+h3 {
+    color: #19c127;
+    text-shadow: 2px 2px black;
+    margin-top: 2%;
+    text-align: center;
+    font-size: 50px;
+    font-weight: bold;
+    margin-bottom: 2%;
+}
+
+.texteCrudite {
+    color: white;
+    line-height: 110%;
+    font-size: 30px;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+
+/*Sujet tomate*/
+.titreTomate {
+    color: #c11919;
+    text-shadow: 2px 2px black;
+}
+
+.presentationCruditeTomate {
+    margin-top: 2%;
+    display: flex;
+    flex-direction: row;
+    margin-left: 10%;
+    margin-right: 10%;
+    border: ridge white 5px;
+    border-top-right-radius: 25px;
+    width: 80%;
+    background: linear-gradient(115deg, rgba(194, 104, 104, 0.8), rgba(107, 12, 12, 0.7)), url(../IMAGES/vue-dessus-tomates-fraiches-mures-gouttes-eau-fond-noir.jpg);
+    margin-bottom: 2%;
+
+}
+
+/*Sujet oignon*/
+.titreOignon {
+    color: #cc2576;
+    text-shadow: 2px 2px black;
+}
+
+.presentationCruditeOignon {
+    margin-top: 2%;
+    display: flex;
+    flex-direction: row;
+    margin-left: 10%;
+    margin-right: 10%;
+    border: ridge white 5px;
+    border-top-right-radius: 25px;
+    width: 80%;
+    background: linear-gradient(115deg, rgba(216, 122, 199, 0.8), rgba(124, 6, 83, 0.7)), url(../IMAGES/vue-laterale-du-panier-plein-oignons-rouges-fond-bois.jpg);
+    margin-bottom: 2%;
+}
+
+
+/* tableau SALADE TOMATE OIGNON */
+table {
+    color: white;
+    font-size: 30px;
+    border-top: solid 2px white;
+    width: 80%;
+    margin-left: 10%;
+    text-align: center;
+    margin-bottom: 5%;
+}
+
+th {
+    border-top: solid 2px white;
+    padding: 1%;
+    height: auto;
+    width: auto;
+   
+}
+
+.sujet1 {
+    color: white;
+    font-size: 30px;
+
+}
+
+td {
+    padding: 1%;
+    border-top: solid 2px white;
+    height: auto;
+    width: auto;
+}
+
+#ajouterLigne{
+    margin-left: 10%;
+    margin-right: 10%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: white;
+    font-size: 30px;
+    margin-bottom: 5%;
+    
+}
+
+#ajouterSujet {
+    padding: 1%;
+    width: 50%;
+}
+
+#ajouterSujet:hover{
+    background-color: #19c127;
+}
+
+.num{
+    width: 5%;
+}
+.tailleSujet{
+    width: 55%;
+}
+.tailleDate{
+    width: 20%;
+}
+.tailleAuteur{
+    width: 20%;
+}
+
+/* PAGE Commentaire */
+
+.sujetCommentaire{
+    color: white;
+    margin-top: 2%;
+    font-size: 60px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.courtois{
+    color: white;
+    margin-top: 1%;
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 2%;
+}
+#ajouterLigneCommentaire{
+    margin-left: 10%;
+    margin-right: 10%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: white;
+    font-size: 30px;
+    margin-bottom: 3%;
+}
+
+.uti{
+    width: 20%;
+}
+.hour{
+    width: 10%;
+}
+.noComment{
+    width: 70%;
+}
+#ajouterCommentaire{
+    width: 40%;
+    padding: 1%;
+}
+#ajouterCommentaire:hover{
+    background-color: #252552;
+    color: white;
+}
+.forumBouge{
+    margin-left: 45%;
+    margin-right: 45%;
+    margin-top: 2%;
+    font-weight: bold;
+}
+
+/* Responsive tablette*/
+@media only screen and (min-width:601px) and (max-width:912px) {
+
+    /*responsive page d'accueil tablette*/
+    .mainIndex {
+        padding-top: 30%;
+        padding-bottom: 30%;
+    }
+
+    .kebab {
+        width: 80%;
+        margin-left: 10%;
+        margin-top: 2%;
+        margin-bottom: 2%;
+        border: ridge black 10px;
+    }
+
+    .kebabImage {
+        height: 500px;
+    }
+
+    header {
+        font-size: 40px;
+    }
+
+    .boutons {
+        margin-left: 28%;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 2%;
+        width: 40%;
+        gap: 10px;
+
+    }
+
+    .boutonsK {
+        font-size: 20px;
+    }
+
+    /*responsive formulaire tablette*/
+    #jeVaisToutCasser {
+        padding-top: 25%;
+        gap: 10px;
+        padding-bottom: 25%;
+    }
+
+    a {
+        font-size: 40px;
+    }
+
+    .form {
+        width: 80%;
+        margin-bottom: 2%;
+        gap: 10px;
+        font-size: 30px;
+    }
+
+    #submit {
+        width: 40%;
+    }
+
+    /*responsive page connexion tablette*/
+    #formulaireConnexion {
+        width: 100%;
+        padding-top: 60%;
+        gap: 20px;
+        padding-bottom: 60%;
+        font-size: 40px;
+    }
+
+    #connexion {
+        width: 50%;
+        padding: 5%;
+    }
+
+
+    /*responsive tablette forum*/
+    .cartesFlex {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .broche {
+        display: none;
+    }
+
+    .blablaKebab {
+        font-size: 30px;
+    }
+
+
+    /* Page sujet tablette */
+    .blablaCrudite{
+        width: 100%;
+    }
+    .presentationCrudite{
+        display: flex;
+        flex-direction: column;
+        border: solid white 2px;
+        border-radius: 0%;
+    }
+    .presentationCruditeTomate{
+        display: flex;
+        flex-direction: column;
+        border: solid white 2px;
+        border-radius: 0%;
+    }
+    .presentationCruditeOignon{
+        display: flex;
+        flex-direction: column;
+        border: solid white 2px;
+        border-radius: 0%;
+    }
+    .salade{
+        width: 100%;
+        height: 300px;
+    }
+    #tableau{
+        font-size: 30px;
+    }
+    .sujet1 {
+        font-size: 30px;
+    }
+    
+    #ajouterSujet{
+        width: 50%;
+        font-size: 20px;
+        padding: 1%;
+    }
+    #ajouterSujet:hover{
+        background-color: #c11919;
+    }
+    #ajouterLigne{
+        margin-bottom: 10%;
+    }
+
+    /* responsive commentaire tablette */
+    .sujetCommentaire{
+        font-size: 40px;
+        font-weight: bold;
+        margin-bottom: 5%;
+    }
+    .courtois{
+        font-size: 30px;
+        margin-bottom: 5%;
+    }
+    #tableauCommentaire{
+        width: 90%;
+        margin-left: 5%;
+        font-size: 30px;
+        margin-bottom: 15%;
+    }
+    #commentaire{
+        height: 300px;
+    }
+    #ajouterCommentaire{
+        width: 80%;
+        font-size: 30px;
+    }
+    #ajouterLigneCommentaire{
+        margin-bottom: 15%;
+    }
+    
+
+}
+
+/*responsive mobile*/
+@media only screen and (max-width:600px) {
+
+    /* responsive page d'accueil*/
+    .mainIndex {
+        padding-top: 15%;
+        padding-bottom: 15%;
+    }
+
+    .kebab {
+        width: 80%;
+        margin-left: 10%;
+        margin-top: 2%;
+        margin-bottom: 2%;
+        border: ridge black 10px;
+        height: 30%;
+    }
+
+    .kebabImage {
+        height: 350px;
+    }
+
+    header {
+        font-size: 30px;
+    }
+
+    h2{
+        font-size: 30px;
+    }
+    
+
+    .boutons {
+        margin-left: 28%;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 2%;
+        width: 40%;
+        gap: 10px;
+
+    }
+
+    .boutonsK {
+        font-size: 20px;
+    }
+
+    /* responsive formulaire*/
+    #jeVaisToutCasser {
+        padding-top: 45%;
+        gap: 10px;
+        padding-bottom: 45%;
+    }
+
+    a {
+        font-size: 30px;
+    }
+
+    .form {
+        width: 80%;
+        margin-bottom: 2%;
+        gap: 10px;
+        font-size: 20px;
+    }
+
+    #submit {
+        width: 40%;
+    }
+
+    /* responsive connexion mobile*/
+    #formulaireConnexion {
+        width: 100%;
+        padding-top: 65%;
+        gap: 20px;
+        padding-bottom: 65%;
+        font-size: 40px;
+    }
+
+    #connexion {
+        width: 50%;
+        padding: 5%;
+    }
+
+    /* responsive mobile forum */
+    .cartesFlex {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .broche {
+        display: none;
+    }
+
+    .blablaKebab {
+        font-size: 20px;
+    }
+
+
+    /* Page sujet mobile */
+    .blablaCrudite{
+        display: none;
+    }
+    .presentationCrudite{
+        border: solid white 2px;
+        border-radius: 0%;
+    }
+    .presentationCruditeTomate{
+        border: solid white 2px;
+        border-radius: 0%;
+    }
+    .presentationCruditeOignon{
+        border: solid white 2px;
+        border-radius: 0%;
+    }
+    .salade{
+        width: 100%;
+        height: 300px;
+    }
+    #tableau{
+        margin-left: 5%;
+        width: 90%;
+        font-size: 20px;
+        line-height: 25px;
+    }
+    .sujet1{
+        font-size: 20px;
+    }
+    #ajouterSujet{
+        width: 50%;
+        font-size: 20px;
+        padding: 1%;
+    }
+    #ajouterSujet:hover{
+        background-color: #c11919;
+    }
+    #ajouterLigne{
+        margin-bottom: 15%;
+    }
+
+
+    /*page commentaire mobile*/
+
+    .sujetCommentaire{
+        font-size: 30px;
+        font-weight: bold;
+        margin-bottom: 5%;
+    }
+    .courtois{
+        font-size: 20px;
+        margin-bottom: 5%;
+    }
+    #tableauCommentaire{
+        width: 90%;
+        margin-left: 5%;
+        font-size: 20px;
+        margin-bottom: 15%;
+    }
+    #commentaire{
+        height: 200px;
+    }
+    #ajouterCommentaire{
+        width: 80%;
+        font-size: 20px;
+    }
+    #ajouterLigneCommentaire{
+        margin-bottom: 15%;
+    }
+}

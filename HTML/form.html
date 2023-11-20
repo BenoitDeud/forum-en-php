@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire kebab</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Anuphan&family=Fira+Sans:wght@100;400&family=Montserrat&family=Roboto:wght@100;300&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="../CSS/reset.css">
+    <link rel="stylesheet" href="../CSS/style.css">
+</head>
+
+<body>
+    <header>
+        <div class="flexForum2">
+            <p>Inscription</p><br>
+            <a href="../index.html">Accueil</a>
+        </div>
+    </header>
+
+
+    <form action="../HTML/login.html" id="jeVaisToutCasser" method="get">
+
+        <div class="form">
+            <label for="nom">Votre nom (3 caractères minimum, pas de chiffre) : <span id="error"></span></label>
+            <input type="text" name="nom" placeholder="Martin" id="nom">
+        </div>
+
+        <div class="form">
+            <label for="prenom">Votre prénom (3 caractères minimum, pas de chiffre) :<span id="errorDeux"></span></label>
+            <input type="text" name="prenom" placeholder="Matin" id="prenom">
+        </div>
+
+        <div class="form">
+            <label for="mail">Votre adresse mail :<span id="errorTrois"></span></label>
+            <input type="text" name="mail" id="mail" placeholder="bbbbbbbb@bbbbbbb.bb">
+        </div>
+
+        <div class="form">
+            <label for="mdps">Votre mot de passe (doit contenir 8 caractères, une maj, une min, un chiffre et un caractère spécial
+                (#+-^[])) :<span id="errorQuatre"></span></label>
+            <input type="text" name="mdps" id="mdps" placeholder="**************">
+        </div>
+
+        <div class="form">
+            <label for="cMdps">Confirmez votre mot de passe :<span id="errorCinq"></span></label>
+            <input type="text" name="cMdps" id="cMdps" placeholder="**************">
+        </div>
+
+        <input type="submit" value="S'enregistrer" id="submit">
+
+    </form>
+
+
+    <script src="../JAVASCRIPT/script.js"></script>
+
+</body>
+
+</html>

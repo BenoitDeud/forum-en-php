@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Espace commentaire</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Anuphan&family=Fira+Sans:wght@100;400&family=Montserrat&family=Roboto:wght@100;300&display=swap"
+    rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="stylesheet" href="../CSS/reset.css">
+  <link rel="stylesheet" href="../CSS/style.css">
+</head>
+
+<body>
+  <header>
+    <div class="flexForum">
+      <p>Espace commentaire</p>
+      <a href="../index.html">Accueil</a>
+    </div>
+    <div>
+      <h2>Bienvenue <span id="prenom"> </span>, nous sommes le : <span id="dateToday"></span> et vous vous êtes
+        connecté(e)
+        à : <span id="heure"></span> </h2>
+    </div>
+    <a href="../HTML/forum.html" class="forumBouge">Forum</a>
+  </header>
+
+  <div>
+    <h4 class="sujetCommentaire">Vous êtes sur le sujet : <span id="sujet"></span></h4>
+    <p class="courtois">Veuillez rester courtois quand vous intéragissez avec les autres utilisateurs.</p>
+  </div>
+
+  <table id="tableauCommentaire">
+    <thead>
+      <tr>
+        <th colspan="3">Espace commentaire</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th class="uti">Utilisateur</th>
+        <th class="hour">Heure</th>
+        <th class="noComment">Commentaire</th>
+      </tr>
+      <tr>
+        <td>Admin</td>
+        <td><span id="heure2"></span></td>
+        <td>De toute façon, le kebab est meilleur sans crudités et avec au moins 2 sauces.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <form id="ajouterLigneCommentaire">
+    <label for="commentaire">Votre commentaire : <span id="error"></span></label>
+    <textarea name="commentaire" id="commentaire" cols="30" rows="10" placeholder="Votre commentaire..."></textarea>
+    <input type="submit" value="Ajouter un commentaire" id="ajouterCommentaire">
+  </form>
+
+
+
+  
+  <script src="../JAVASCRIPT/commentaire.js"></script>
+
+</body>
+
+</html>
