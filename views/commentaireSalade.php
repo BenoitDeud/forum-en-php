@@ -2,7 +2,7 @@
 <html lang="fr">
 
 <head>
-  <?php require_once("../includes/head2.php") ?>
+  <?php require_once "../includes/head2.php" ?>
   <title>Espace commentaire</title>
 </head>
 

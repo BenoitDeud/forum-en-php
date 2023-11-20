@@ -1,5 +1,5 @@
 
-<?php require_once "../includes/head1.php" ?>
+<?php require_once "../forumKebab/includes/head1.php" ?>
 
 <body>
   <header>

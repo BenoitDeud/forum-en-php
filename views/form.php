@@ -2,7 +2,8 @@
 <html lang="fr">
 
 <head>
-    <?php require_once("../includes/head2.php") ?>
+    <?php require_once "../includes/head2.php" ?>
+    <?php require_once "../controllers/addControllerForm.php" ?>
     <title>Formulaire kebab</title>
 </head>
 
@@ -15,7 +16,7 @@
     </header>
 
 
-    <form action="../HTML/login.php" id="jeVaisToutCasser" method="get">
+    <form action="../controllers/addControllerForm.php" id="jeVaisToutCasser" method="POST">
 
         <div class="form">
             <label for="nom">Votre nom (3 caractères minimum, pas de chiffre) : <span id="error"></span></label>
@@ -49,8 +50,7 @@
 
     </form>
 
-    <!--
-    <script src="../JAVASCRIPT/script.js"></script> -->
+    <script src="../JAVASCRIPT/script.js"></script>
 
 </body>
 
