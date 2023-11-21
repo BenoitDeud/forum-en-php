@@ -122,6 +122,10 @@ h1 {
     gap: 5px;
 }
 
+#erreur{
+    color:#c11919;
+}
+
 /* LOGIN */
 #formulaireConnexion {
     display: flex;
