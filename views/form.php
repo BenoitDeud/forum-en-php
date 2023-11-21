@@ -65,7 +65,7 @@
                 (#+-^[])) :<span id="errorQuatre"></span></label>
             <?php
             if ($_SESSION['erreur5'] == 1) {
-                echo '<p id="erreur">tu peux le faire !, ne pas oublier : (#+-^[])</p>';
+                echo '<p id="erreur">Tu peux le faire ! Ne pas oublier : (#+-^[])</p>';
             }
             ?>
             <input type="text" name="mdps" id="mdps" placeholder="**************">
@@ -82,7 +82,7 @@
         </div>
 
         <input type="submit" value="S'enregistrer" id="submit"><br>
-        <input id="submit" class="input-style" type="submit" name="reset" value="Reset" />
+        <input id="submit" class="input-style" type="submit" name="reset" value="Restart" />
 
     </form>
     <!--
