@@ -21,7 +21,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $regexNomPre = '/^([a-zA-Zéèîïô]){3,}$/i';
 
     // regex de l'adresse mail
-    $regexMail = '/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/';
+    $regexMail = '/^[0-9a-zA-Z]([-.\w]*[0-9a-zA-Z_+])*@(([0-9a-zA-Z][-\w]*\.)+[a-zA-Z]{2,9})$/';
 
     // regex mot de passe 
     $regexPass = '/^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[#\^\+\-\[\]])(?=.{8,})/';
@@ -42,7 +42,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $_SESSION['erreur2'] = 1;
         header("Refresh:0; url= ../views/form.php");
 
-    } else if (!preg_match($regexMail, $mail) || $mail == "") {
+    // filter var pour vérifier si il s'agit d'une email sans utiliser les expression régu
+    } else if (!filter_var($mail,FILTER_VALIDATE_EMAIL) || $mail == "") {
         $_SESSION['erreur3'] = 1;
         header("Refresh:0; url= ../views/form.php");
 

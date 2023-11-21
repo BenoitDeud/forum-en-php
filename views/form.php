@@ -29,7 +29,7 @@
             <label for="nom">Votre nom (3 caractères minimum, pas de chiffre) : <span id="error"></span></label>
             <?php
             if ($_SESSION['erreur1'] == 1) {
-                echo '<p id="erreur">Nom incorrect ou trop court (3 caractères minimum et sans chiffres) !</p>';
+                echo '<p id="erreur">Comment as-tu fait pour te tromper, relisez la ligne du haut !!!!!!!</p>';
             } 
             ?>
             <input type="text" name="nom" placeholder="Martin" id="nom">
@@ -40,7 +40,7 @@
                     id="errorDeux"></span></label>
             <?php
             if ($_SESSION['erreur2'] == 1) {
-                echo '<p id="erreur">Prénom incorrect ou trop court (3 caractères minimum et sans chiffres) !</p>';
+                echo '<p id="erreur">Comment as-tu fait pour te tromper, relisez la ligne du haut !!!!!!!</p>';
             } 
             ?>
             <input type="text" name="prenom" placeholder="Matin" id="prenom">
