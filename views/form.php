@@ -23,7 +23,7 @@
     </header>
 
 
-    <form action="../controllers/addControllerForm.php" id="jeVaisToutCasser" method="POST">
+    <form action="../controllers/addControllerForm.php" id="jeVaisToutCasser" method="POST" enctype="multipart/form-data">
 
         <div class="form">
             <label for="nom">Votre nom (3 caractères minimum, pas de chiffre) : <span id="error"></span></label>
@@ -79,6 +79,22 @@
             }
             ?>
             <input type="text" name="cMdps" id="cMdps" placeholder="**************">
+        </div>
+
+        <div class="form">
+            <label for="imageUser">Veuillez sélectionner une image de profil : </label>
+            <?php
+            if ($_SESSION['erreur7'] == 1) {
+                echo '<p id="erreur">Image UPLOAD</p>';
+            }
+            ?>
+            <?php
+            if ($_SESSION['erreur8'] == 1) {
+                echo '<p id="erreur">Pas le bon format ou bien trop volumineux (format png, gif, jpg, jpeg, txt ou doc)</p>';
+            }
+            ?>
+            <input type="file" name="imageUser" id="">
+            <input type="hidden" name="MAX_FILE_SIZE" value="100000">
         </div>
 
         <input type="submit" value="S'enregistrer" id="submit"><br>
