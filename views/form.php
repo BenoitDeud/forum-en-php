@@ -83,16 +83,6 @@
 
         <div class="form">
             <label for="imageUser">Veuillez sélectionner une image de profil : </label>
-            <?php
-            if ($_SESSION['erreur7'] == 1) {
-                echo '<p id="erreur">Image UPLOAD</p>';
-            }
-            ?>
-            <?php
-            if ($_SESSION['erreur8'] == 1) {
-                echo '<p id="erreur">Pas le bon format ou bien trop volumineux (format png, gif, jpg, jpeg, txt ou doc)</p>';
-            }
-            ?>
             <input type="file" name="imageUser" id="">
             <input type="hidden" name="MAX_FILE_SIZE" value="100000">
         </div>
