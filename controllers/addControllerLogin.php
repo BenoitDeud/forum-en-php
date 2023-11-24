@@ -41,6 +41,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             $_SESSION['err10'] = 0;
             $_SESSION['success2'] = 1;
             $_SESSION['utilisateur'] = 1;
+            $_SESSION['idUtilisateur'] = $utilisateurMail['idUtilisateur'];
             $_SESSION['nom'] = $utilisateurMail['nomUtilisateur'];
             $_SESSION['prenom'] = $utilisateurMail['prenomUtilisateur'];
             $_SESSION['mail'] = $utilisateurMail['adresseMail'];

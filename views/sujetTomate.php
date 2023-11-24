@@ -4,10 +4,11 @@
 <head>
 
   <?php
-  if (session_status() !== PHP_SESSION_ACTIVE) session_start();
-  require_once("../includes/head2.php")
-    ?>
-
+  if (session_status() !== PHP_SESSION_ACTIVE)
+    session_start();
+  require_once "../includes/head2.php";
+  require_once "../controllers/addTomate.php";
+  ?>
   <title>Sujet tomate</title>
 
 </head>
@@ -38,7 +39,7 @@
     <table id="tableau">
       <thead>
         <tr>
-          <th colspan="4">Les sujets concernant la tomate</th>
+          <th colspan="5">Les sujets concernant la tomate</th>
         </tr>
       </thead>
       <tbody>
@@ -48,10 +49,23 @@
           <th class="tailleDate">Date de création</th>
           <th class="tailleAuteur">Auteur</th>
         </tr>
+        <?php
+        //boucle foreach pour afficher chaque ligne de la requête
+        foreach ($lignes2 as $ligne2) {
+          echo
+            '<tr>
+            <td>' . $ligne2['idSujet'] . '</td>
+            <td><a href="../views/commentaireSalade.php">' . $ligne2['nomSujet'] . '</a></td>
+            <td>' . $ligne2['dateSujet'] . '</td>
+            <td><div><img src="../IMAGES/imageProfil/'.$ligne2['imageUtilisateur'].'" class="imageCommentaire"></div>' . $ligne2['nomUtilisateur'] . ' ' . $ligne2['prenomUtilisateur'] . '</td>
+            
+        </tr>';
+        }
+        ?>
       </tbody>
     </table>
 
-    <form id="ajouterLigne">
+    <form id="ajouterLigne" action="../controllers/addTomate.php" method="POST">
       <label for="sujet">Titre du sujet : <span id="error"></span></label>
       <input type="text" name="sujet" id="sujet" placeholder="Votre sujet...">
       <input type="submit" value="Ajouter un sujet" id="ajouterSujet">

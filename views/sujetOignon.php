@@ -1,20 +1,22 @@
 <!DOCTYPE html>
 <html lang="fr">
 
-<head>
-  <?php 
-  require_once "../includes/head2.php";
-  require_once "../controllers/addOignon.php";
-  ?>
 
-  <title>Sujet oignon</title>
+<?php
+if (session_status() !== PHP_SESSION_ACTIVE)
+  session_start();
+require_once "../includes/head2.php";
+require_once "../controllers/addOignon.php";
+?>
+<title>Sujet oignon</title>
 </head>
 
 <body>
   <?php
-  if (session_status() !== PHP_SESSION_ACTIVE) session_start();
-  require_once "../includes/headerForum.php" 
-   ?>
+  if (session_status() !== PHP_SESSION_ACTIVE)
+    session_start();
+  require_once "../includes/headerForum.php"
+    ?>
 
   <main>
     <div class="presentationCruditeOignon">
@@ -46,6 +48,18 @@
           <th class="tailleDate">Date de création</th>
           <th class="tailleAuteur">Auteur</th>
         </tr>
+        <?php
+        //boucle foreach pour afficher chaque ligne de la requête
+        foreach ($lignes3 as $ligne3) {
+          echo
+            '<tr>
+            <td>' . $ligne3['idSujet'] . '</td>
+            <td><a href="../views/commentaireSalade.php">' . $ligne3['nomSujet'] . '</a></td>
+            <td>' . $ligne3['dateSujet'] . '</td>
+            <td><div><img src="../IMAGES/imageProfil/'.$ligne3['imageUtilisateur'].'" class="imageCommentaire"></div>' . $ligne3['nomUtilisateur'] . ' ' . $ligne3['prenomUtilisateur'] . '</td>
+        </tr>';
+        }
+        ?>
       </tbody>
     </table>
 
