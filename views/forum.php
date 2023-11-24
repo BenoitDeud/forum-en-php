@@ -2,22 +2,15 @@
 <html lang="fr">
 
 <head>
-  <?php require_once("../includes/head2.php") ?>
+  <?php
+  if (session_status() !== PHP_SESSION_ACTIVE) session_start();
+  require_once("../includes/head2.php")
+    ?>
   <title>Forum kebab</title>
 </head>
 
 <body>
-  <header>
-    <div class="flexForum">
-      <p>Forum</p>
-      <a href="../index.php">Accueil</a>
-    </div>
-    <div>
-      <h2>Bienvenue <span id="prenom"> </span>, nous sommes le : <span id="dateToday"></span> et vous vous êtes
-        connecté(e)
-        à : <span id="heure"></span></h2>
-    </div>
-  </header>
+  <?php require_once "../includes/headerForum.php" ?>
 
   <main class="mainForum" id="mainForumm">
 
@@ -87,7 +80,7 @@
     </div>
   </main>
 
-<!--
+  <!--
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
     crossorigin="anonymous"></script> 

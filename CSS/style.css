@@ -21,7 +21,6 @@ header {
     justify-content: space-around;
     font-weight: bold;
     border-bottom: solid 2px white;
-
 }
 
 h1 {
@@ -430,6 +429,43 @@ td {
     margin-right: 45%;
     margin-top: 2%;
     font-weight: bold;
+}
+
+/* php nom prenom date */
+
+.unTruc{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    font-size: 30px;
+    justify-content: space-between;
+}
+
+.utilisateur{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    font-size: 45px;
+    padding: 1%;
+}
+
+.imageProfil{
+    width: 150px;
+    border: white solid 2px;
+}
+.utilisateurDate{
+    display: flex;
+    flex-direction: column;
+}
+.fff{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.aaa{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
 }
 
 /* Responsive tablette*/

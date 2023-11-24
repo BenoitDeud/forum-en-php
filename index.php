@@ -1,5 +1,8 @@
 
-<?php require_once "../forumKebab/includes/head1.php" ?>
+<?php 
+if (session_status() !== PHP_SESSION_ACTIVE) session_start();
+require_once "../forumKebab/includes/head1.php"
+?>
 
 <body>
   <header>

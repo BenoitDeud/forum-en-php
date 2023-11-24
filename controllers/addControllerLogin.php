@@ -1,7 +1,7 @@
 <?php
 
 // début de la session pour mettre les indications en cas de réussite ou d'erreur
-session_start();
+if (session_status() !== PHP_SESSION_ACTIVE) session_start();
 
 require_once "../includes/connexiondb.php";
 
@@ -36,9 +36,17 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         } 
 
         else {
+            date_default_timezone_set('Europe/Paris');
             $_SESSION['err9'] = 0;
             $_SESSION['err10'] = 0;
             $_SESSION['success2'] = 1;
+            $_SESSION['utilisateur'] = 1;
+            $_SESSION['nom'] = $utilisateurMail['nomUtilisateur'];
+            $_SESSION['prenom'] = $utilisateurMail['prenomUtilisateur'];
+            $_SESSION['mail'] = $utilisateurMail['adresseMail'];
+            $_SESSION['image'] = $utilisateurMail['imageUtilisateur'];
+            $_SESSION['dateInscription'] = $utilisateurMail['dateInscription'];
+            $_SESSION['dateNow'] = new DateTime();
             header('Location:../views/forum.php');
         }
 
@@ -48,9 +56,11 @@ if (isset($_POST['reset'])) {
     $_SESSION['err9'] = 0;
     $_SESSION['err10'] = 0;
     $_SESSION['success2'] = 0;
-   
+    
+
+
     header("Refresh:0; url= ../views/login.php");
+    exit;
 }
-
-
 ?>
+

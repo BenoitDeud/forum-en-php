@@ -3,6 +3,7 @@
 
 <head>
     <?php 
+    if (session_status() !== PHP_SESSION_ACTIVE) session_start();
     require_once "../includes/head2.php";
     require_once "../controllers/addControllerLogin.php";
     ?>

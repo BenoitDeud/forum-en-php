@@ -2,23 +2,18 @@
 <html lang="fr">
 
 <head>
-  <?php require_once "../includes/head2.php" ?>
+  
+<?php
+  if (session_status() !== PHP_SESSION_ACTIVE) session_start();
+  require_once "../includes/headerForum.php" 
+   ?>
   <title>Espace commentaire</title>
 </head>
 
 <body>
-  <header>
-    <div class="flexForum">
-      <p>Espace commentaire</p>
-      <a href="../index.php">Accueil</a>
-    </div>
-    <div>
-      <h2>Bienvenue <span id="prenom"> </span>, nous sommes le : <span id="dateToday"></span> et vous vous êtes
-        connecté(e)
-        à : <span id="heure"></span> </h2>
-    </div>
-    <a href="../HTML/forum.php" class="forumBouge">Forum</a>
-  </header>
+  <?php 
+  require_once "../includes/headerForum.php";
+  ?>
 
   <div>
     <h4 class="sujetCommentaire">Vous êtes sur le sujet : <span id="sujet"></span></h4>

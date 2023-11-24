@@ -2,24 +2,20 @@
 <html lang="fr">
 
 <head>
-  <?php require_once("../includes/head2.php") ?>
+
+  <?php
+  if (session_status() !== PHP_SESSION_ACTIVE) session_start();
+  require_once("../includes/head2.php")
+    ?>
   <title>Sujet Salade</title>
+
 </head>
 
 <body>
-  <header>
-    <div class="flexForum">
-      <p>Sujet : la salade</p>
-      <a href="../index.php">Accueil</a>
-
-    </div>
-    <div>
-      <h2>Bienvenue <span id="prenom"> </span>, nous sommes le : <span id="dateToday"></span> et vous vous êtes
-        connecté(e)
-        à : <span id="heure"></span></h2>
-    </div>
-    <a href="../views/forum.php" class="forumBouge">Forum</a>
-  </header>
+  
+  <?php
+  require_once "../includes/headerForum.php"
+    ?>
 
   <main>
     <div class="presentationCrudite">

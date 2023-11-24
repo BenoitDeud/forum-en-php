@@ -2,24 +2,19 @@
 <html lang="fr">
 
 <head>
-  <?php require_once("../includes/head2.php") ?>
+  <?php 
+  require_once "../includes/head2.php";
+  require_once "../controllers/addOignon.php";
+  ?>
+
   <title>Sujet oignon</title>
 </head>
 
 <body>
-  <header>
-    <div class="flexForum">
-      <p>Sujet : l'oignon</p>
-      <a href="../index.php">Accueil</a>
-
-    </div>
-    <div>
-      <h2>Bienvenue <span id="prenom"> </span>, nous sommes le : <span id="dateToday"></span> et vous vous êtes
-        connecté(e)
-        à : <span id="heure"></span></h2>
-    </div>
-    <a href="../views/forum.php" class="forumBouge">Forum</a>
-  </header>
+  <?php
+  if (session_status() !== PHP_SESSION_ACTIVE) session_start();
+  require_once "../includes/headerForum.php" 
+   ?>
 
   <main>
     <div class="presentationCruditeOignon">
@@ -54,7 +49,7 @@
       </tbody>
     </table>
 
-    <form id="ajouterLigne">
+    <form id="ajouterLigne" action="../controllers/addOignon.php" method="POST">
       <label for="sujet">Titre du sujet : <span id="error"></span></label>
       <input type="text" name="sujet" id="sujet" placeholder="Votre sujet...">
       <input type="submit" value="Ajouter un sujet" id="ajouterSujet">

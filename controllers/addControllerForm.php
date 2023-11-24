@@ -1,7 +1,7 @@
 <?php
 
 // début de la session pour mettre les indications en cas de réussite ou d'erreur
-session_start();
+if (session_status() !== PHP_SESSION_ACTIVE) session_start();
 
 require_once "../includes/connexiondb.php";
 
@@ -17,6 +17,9 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $mail = $_POST["mail"];
     $mot = $_POST["mdps"];
     $cMot = $_POST["cMdps"];
+    date_default_timezone_set('Europe/Paris');
+    $today = new DateTime();
+
 
     // regex du nom et prénom
     $regexNomPre = '/^([a-zA-Zéèîïô]){3,}$/i';
@@ -39,38 +42,68 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $dossierImage = '../IMAGES/imageProfil/';
     $fichier = basename($_FILES['imageUser']['name']);
     move_uploaded_file($_FILES['imageUser']['tmp_name'], $dossierImage . $fichier);
+
     
-
-
+    
     // les différentes vérifications pour le formulaire
     if (!preg_match($regexNomPre, $nom) || $nom == "") {
         $_SESSION['erreur1'] = 1;
+        $_SESSION['erreur2'] = 0;
+        $_SESSION['erreur3'] = 0;
+        $_SESSION['erreur4'] = 0;
+        $_SESSION['erreur5'] = 0;
+        $_SESSION['erreur6'] = 0;
         header("Refresh:0; url= ../views/form.php");
 
     } else if (!preg_match($regexNomPre, $prenom) || $prenom == "") {
+        $_SESSION['erreur1'] = 0;
         $_SESSION['erreur2'] = 1;
+        $_SESSION['erreur3'] = 0;
+        $_SESSION['erreur4'] = 0;
+        $_SESSION['erreur5'] = 0;
+        $_SESSION['erreur6'] = 0;
         header("Refresh:0; url= ../views/form.php");
 
         // filter var pour vérifier si il s'agit d'une email sans utiliser les expression régu
     } else if (!filter_var($mail, FILTER_VALIDATE_EMAIL) || $mail == "") {
+        $_SESSION['erreur1'] = 0;
+        $_SESSION['erreur2'] = 0;
         $_SESSION['erreur3'] = 1;
+        $_SESSION['erreur4'] = 0;
+        $_SESSION['erreur5'] = 0;
+        $_SESSION['erreur6'] = 0;
         header("Refresh:0; url= ../views/form.php");
 
     } else if ($utilisateurMail) {
+        $_SESSION['erreur1'] = 0;
+        $_SESSION['erreur2'] = 0;
+        $_SESSION['erreur3'] = 0;
         $_SESSION['erreur4'] = 1;
+        $_SESSION['erreur5'] = 0;
+        $_SESSION['erreur6'] = 0;
         header("Refresh:0; url= ../views/form.php");
 
     } else if (!preg_match($regexPass, $mot) || $mot == "") {
+        $_SESSION['erreur1'] = 0;
+        $_SESSION['erreur2'] = 0;
+        $_SESSION['erreur3'] = 0;
+        $_SESSION['erreur4'] = 0;
         $_SESSION['erreur5'] = 1;
+        $_SESSION['erreur6'] = 0;
         header("Refresh:0; url= ../views/form.php");
 
     } else if ($mot != $cMot) {
+        $_SESSION['erreur1'] = 0;
+        $_SESSION['erreur2'] = 0;
+        $_SESSION['erreur3'] = 0;
+        $_SESSION['erreur4'] = 0;
+        $_SESSION['erreur5'] = 0;
         $_SESSION['erreur6'] = 1;
         header("Refresh:0; url= ../views/form.php");
 
     } else {
-        $req = $con->prepare("INSERT INTO utilisateur (nomUtilisateur,prenomUtilisateur,adresseMail,motPasse,imageUtilisateur) VALUES (?,?,?,?,?)");
-        $req->execute(array($nom, $prenom, $mail, $steak,$fichier));
+        $req = $con->prepare("INSERT INTO utilisateur (nomUtilisateur,prenomUtilisateur,adresseMail,motPasse,imageUtilisateur,dateInscription) VALUES (?,?,?,?,?,?)");
+        $req->execute(array($nom, $prenom, $mail, $steak,$fichier,$today->format('d.m.y')));
         $_SESSION['erreur1'] = 0;
         $_SESSION['erreur2'] = 0;
         $_SESSION['erreur3'] = 0;
