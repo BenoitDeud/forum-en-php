@@ -451,6 +451,7 @@ td {
 
 .imageProfil{
     width: 150px;
+    height: 100px;
     border: white solid 2px;
 }
 .utilisateurDate{
@@ -473,6 +474,10 @@ td {
     height: 100px;
     padding: 1%;
     border: solid 2px white;
+}
+
+#erreur12{
+    color: #3bc119;
 }
 
 /* Responsive tablette*/

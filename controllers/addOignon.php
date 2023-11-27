@@ -25,11 +25,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $sujet = $_POST['sujet'];
     $dateDate = new DateTime();
     if ($sujet == "") {
-
-        header("Refresh:0; url= ../views/sujetSalade.php");
+        $_SESSION['erreur12'] = 1;
+        header("Refresh:0; url= ../views/sujetOignon.php");
     } else {
-        $req = $con->prepare("INSERT INTO sujet (nomSujet,idUtilisateur,idCate,dateSujet) VALUES (?,?,?,?)");
+        $_SESSION['erreur12'] = 0;
+        $req = $con->prepare("INSERT INTO sujet (idSujet,idUtilisateur,idCate,dateSujet) VALUES (?,?,?,?)");
         $req->execute(array($sujet,$_SESSION['idUtilisateur'],3, $dateDate->format('d/m/y à H:i:s')));
         header("Refresh:0; url= ../views/sujetOignon.php");
+        
     }
 }

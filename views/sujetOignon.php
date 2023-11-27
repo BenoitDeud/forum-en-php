@@ -54,7 +54,7 @@ require_once "../controllers/addOignon.php";
           echo
             '<tr>
             <td>' . $ligne3['idSujet'] . '</td>
-            <td><a href="../views/commentaireSalade.php">' . $ligne3['nomSujet'] . '</a></td>
+            <td><a href="../views/commentaire.php" class="sujet1">' . $ligne3['nomSujet'] . '</a></td>
             <td>' . $ligne3['dateSujet'] . '</td>
             <td><div><img src="../IMAGES/imageProfil/'.$ligne3['imageUtilisateur'].'" class="imageCommentaire"></div>' . $ligne3['nomUtilisateur'] . ' ' . $ligne3['prenomUtilisateur'] . '</td>
         </tr>';
@@ -65,6 +65,11 @@ require_once "../controllers/addOignon.php";
 
     <form id="ajouterLigne" action="../controllers/addOignon.php" method="POST">
       <label for="sujet">Titre du sujet : <span id="error"></span></label>
+      <?php
+            if ($_SESSION['erreur12'] == 1) {
+                echo '<p id="erreur12">(Veuillez mettre un sujet si vous le souhaitez, le champ ne peut pas être vide.)</p>';
+            } 
+            ?>
       <input type="text" name="sujet" id="sujet" placeholder="Votre sujet...">
       <input type="submit" value="Ajouter un sujet" id="ajouterSujet">
     </form>

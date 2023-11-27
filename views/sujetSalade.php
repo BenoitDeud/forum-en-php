@@ -51,7 +51,7 @@
           echo
             '<tr>
             <td>' . $ligne['idSujet'] . '</td>
-            <td><a href="../views/commentaireSalade.php">' . $ligne['nomSujet'] . '</a></td>
+            <td><a href="../views/commentaire.php" class="sujet1">' . $ligne['nomSujet'] . '</a></td>
             <td>' . $ligne['dateSujet'] . '</td>
             <td><div><img src="../IMAGES/imageProfil/'.$ligne['imageUtilisateur'].'" class="imageCommentaire"></div>' . $ligne['nomUtilisateur'] . ' ' . $ligne['prenomUtilisateur'] . '</td>
         </tr>';
@@ -62,6 +62,11 @@
 
     <form id="ajouterLigne" action="../controllers/addSalade.php" method="POST">
       <label for="sujet">Titre du sujet : <span id="error"></span></label>
+      <?php
+            if ($_SESSION['erreur12'] == 1) {
+                echo '<p id="erreur12">(Veuillez mettre un sujet si vous le souhaitez, le champ ne peut pas être vide.)</p>';
+            } 
+            ?>
       <input type="text" name="sujet" id="sujet" placeholder="Votre sujet...">
       <input type="submit" value="Ajouter un sujet" id="ajouterSujet">
     </form>

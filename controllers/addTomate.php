@@ -15,7 +15,7 @@ $req = "SELECT * FROM sujet
 $req = "SELECT sujet.idSujet,sujet.nomSujet,sujet.dateSujet,sujet.idUtilisateur,utilisateur.nomUtilisateur,utilisateur.prenomUtilisateur,utilisateur.imageUtilisateur
         FROM sujet 
         JOIN utilisateur ON utilisateur.idUtilisateur = sujet.idUtilisateur
-        WHERE idCate = 2 order by idSujet";
+        WHERE idCate = 2 order by dateSujet";
 
 $res = $con->query($req);
 
@@ -25,11 +25,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $sujet = $_POST['sujet'];
     $dateDate = new DateTime();
     if ($sujet == "") {
-
-        header("Refresh:0; url= ../views/sujetSalade.php");
+        $_SESSION['erreur12'] = 1;
+        header("Refresh:0; url= ../views/sujetTomate.php");
     } else {
+        $_SESSION['erreur12'] = 0;
         $req = $con->prepare("INSERT INTO sujet (nomSujet,idUtilisateur,idCate,dateSujet) VALUES (?,?,?,?)");
         $req->execute(array($sujet,$_SESSION['idUtilisateur'],2, $dateDate->format('d/m/y à H:i:s')));
         header("Refresh:0; url= ../views/sujetTomate.php");
+        
     }
 }
